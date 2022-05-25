@@ -27,8 +27,7 @@ class HelloWorld {
         int fact5 = factorial(5);
         System.out.println(fact5);
 
-        int[] myNums;
-        myNums = new int[5];
+        int[] myNums = new int[5];
 
         for (int i = 0; i < 5; i++) {
             myNums[i] = 5-i;
@@ -39,14 +38,13 @@ class HelloWorld {
         
         // Arrays.sort(myNums);
         sortArray(myNums);
-        for (int i = 0; i < myNums.length; i++) {
-            System.out.println(myNums[i]);
+        for (int i : myNums) {
+            System.out.println(i);
         }
 
         // Using user
 
-        student aditya;
-        aditya = new student();
+        student aditya = new student();
         aditya.Setter("Aditya Pathak", "Information Science", 22, 7.89);
 
         String adityaInfo = aditya.Getter();

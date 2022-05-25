@@ -1,5 +1,7 @@
 package models;
 
+import services.ispass_service;
+
 public class student {
     String name, branch;
     int age;
@@ -13,14 +15,7 @@ public class student {
     }
 
     public String Getter() {
-        boolean ispass = this.isPlaced();
+        boolean ispass = ispass_service.isPass(this.cgpa);
         return "Name of student is: " + this.name + " Branch: " + this.branch + " Age: " + String.valueOf(this.age) + " CGPA: " + String.valueOf(this.cgpa) + " Has Passed the exam: " + String.valueOf(ispass);
-    }
-
-    private boolean isPlaced() {
-        if (this.cgpa > 7.0) {
-            return true;
-        }
-        return false;
     }
 }
