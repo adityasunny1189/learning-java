@@ -1,9 +1,23 @@
 [
   {
+    "name": "Amit Shahwal",
+    "branch": "ISE",
+    "rollno": 63,
+    "year": 4,
+    "cgpa": 9.18
+  },
+  {
     "name": "Aditya Pathak",
     "branch": "ISE",
     "rollno": 3,
     "year": 4,
     "cgpa": 7.89
+  },
+  {
+    "name": "Adarsh Shukla",
+    "branch": "ISE",
+    "rollno": 2,
+    "year": 4,
+    "cgpa": 8.2
   }
 ]

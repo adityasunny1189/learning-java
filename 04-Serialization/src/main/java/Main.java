@@ -12,12 +12,14 @@ public class Main {
         // Read the file
         String jsonString = "";
         Map<Integer, Boolean> filledRollnums = new HashMap();
+        List<Student> students = new ArrayList<>();
+        
         try (FileReader reader = new FileReader("students.json")) {
             int i;
             while ((i = reader.read()) != -1) {
                 jsonString += (char)i;
             }
-            List<Student> students = Service.Decode(jsonString);
+            students = Service.Decode(jsonString);
             for (Student student : students) {
                 System.out.println(student.getName());
                 filledRollnums.put(student.getRollno(), true);
@@ -47,7 +49,6 @@ public class Main {
 //        String adityaJSON = Service.Encode(aditya);
 //        System.out.println(adityaJSON);
 
-        List<Student> students = new ArrayList<>();
         students.add(aditya);
         String json = Service.Encode(students);
 
